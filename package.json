@@ -1,0 +1,7 @@
+{
+  "name": "problem-solving",
+  "private": true,
+  "scripts": {
+    "test": "node --test *.test.js"
+  }
+}
