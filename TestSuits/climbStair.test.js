@@ -1,6 +1,6 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
-const { climbStair } = require("./weekTwo");
+const { climbStair } = require("../weekTwo");
 
 function assertClimbStair(n, expected) {
   const result = climbStair(n);

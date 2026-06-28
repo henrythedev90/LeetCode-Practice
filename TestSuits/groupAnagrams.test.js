@@ -1,6 +1,6 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
-const { groupAnagrams } = require("./mediumProblems");
+const { groupAnagrams } = require("../mediumProblems");
 
 function normalizeGroups(groups) {
   return groups
@@ -15,7 +15,7 @@ function assertGroupAnagrams(strs, expected) {
   assert.equal(
     result.every((group) => Array.isArray(group)),
     true,
-    "each group should be an array of strings"
+    "each group should be an array of strings",
   );
 
   assert.deepEqual(normalizeGroups(result), normalizeGroups(expected));
@@ -25,11 +25,7 @@ describe("groupAnagrams", () => {
   it("groups the classic leetcode example", () => {
     assertGroupAnagrams(
       ["eat", "tea", "tan", "ate", "nat", "bat"],
-      [
-        ["eat", "tea", "ate"],
-        ["tan", "nat"],
-        ["bat"],
-      ]
+      [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]],
     );
   });
 
@@ -46,10 +42,7 @@ describe("groupAnagrams", () => {
   });
 
   it("puts words with no shared anagrams in separate groups", () => {
-    assertGroupAnagrams(
-      ["abc", "def", "ghi"],
-      [["abc"], ["def"], ["ghi"]]
-    );
+    assertGroupAnagrams(["abc", "def", "ghi"], [["abc"], ["def"], ["ghi"]]);
   });
 
   it("groups two words that are anagrams", () => {
@@ -66,14 +59,14 @@ describe("groupAnagrams", () => {
       [
         ["aab", "aba", "baa"],
         ["xyz", "zyx"],
-      ]
+      ],
     );
   });
 
   it("groups words with repeated letters correctly", () => {
     assertGroupAnagrams(
       ["bdddddddddd", "bbbbbbbbbbc"],
-      [["bdddddddddd"], ["bbbbbbbbbbc"]]
+      [["bdddddddddd"], ["bbbbbbbbbbc"]],
     );
   });
 
@@ -83,7 +76,7 @@ describe("groupAnagrams", () => {
       [
         ["id", "di"],
         ["gen", "neg", "eng"],
-      ]
+      ],
     );
   });
 });

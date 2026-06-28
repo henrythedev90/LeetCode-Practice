@@ -1,6 +1,6 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
-const { containsDuplicate } = require("./index");
+const { containsDuplicate } = require("../index");
 
 function assertContainsDuplicate(nums, expected) {
   const result = containsDuplicate(nums);

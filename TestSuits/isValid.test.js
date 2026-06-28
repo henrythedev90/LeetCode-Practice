@@ -1,6 +1,6 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
-const { isValid } = require("./weekTwo");
+const { isValid } = require("../weekTwo");
 
 function assertIsValid(s, expected) {
   const result = isValid(s);

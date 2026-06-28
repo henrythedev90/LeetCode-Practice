@@ -23,4 +23,23 @@ function isValid(s) {
   return stack.length === 0;
 }
 
-module.exports = { climbStair, isValid };
+class ListNode {
+  constructor(val, next = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+function reverseLink(head) {
+  let prev = null;
+  let current = head;
+  while (current) {
+    let nextNode = current.next;
+    current.next = prev;
+    prev = current;
+    current = nextNode;
+  }
+  return prev;
+}
+
+module.exports = { climbStair, isValid, reverseLink, ListNode };

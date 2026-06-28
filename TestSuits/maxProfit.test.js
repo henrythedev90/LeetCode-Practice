@@ -1,6 +1,6 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
-const { maxProfit } = require("./index");
+const { maxProfit } = require("../index");
 
 function assertMaxProfit(prices, expected) {
   const result = maxProfit(prices);

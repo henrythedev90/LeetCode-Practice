@@ -1,6 +1,6 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
-const { isAnagram } = require("./index.js");
+const { isAnagram } = require("../index.js");
 
 function assertIsAnagram(s, t, expected) {
   const result = isAnagram(s, t);
