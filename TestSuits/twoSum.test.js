@@ -1,6 +1,6 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
-const { twoSum } = require("./index");
+const { twoSum } = require("../index");
 
 function assertTwoSum(nums, target, expected) {
   const result = twoSum(nums, target);

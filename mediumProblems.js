@@ -22,8 +22,18 @@ function groupAnagrams(str) {
  * @returns {number[]}
  */
 function topKFrequent(nums, k) {
-  // TODO: implement your solution here
-  throw new Error("Not implemented");
+  let obj = {};
+  for (let i = 0; i < nums.length; i++) {
+    if (!obj[nums[i]]) {
+      obj[nums[i]] = 1;
+    } else {
+      obj[nums[i]]++;
+    }
+  }
+  let result = Object.entries(obj)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, k);
+  return result.map((pair) => Number(pair[0]));
 }
 
 module.exports = { groupAnagrams, topKFrequent };

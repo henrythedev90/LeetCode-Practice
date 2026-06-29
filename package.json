@@ -2,6 +2,6 @@
   "name": "problem-solving",
   "private": true,
   "scripts": {
-    "test": "node --test TestSuits/*.test.js twoSum.test.js"
+    "test": "node --test TestSuits/*.test.js"
   }
 }
